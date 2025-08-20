@@ -35,5 +35,8 @@ plt.ylabel("Revenue ($)")
 # Rotate x labels for readability
 plt.xticks(rotation=45)
 
+# Adjust layout
+plt.tight_layout()
+
 # Save chart with exact size
 plt.savefig("chart.png", dpi=100)
