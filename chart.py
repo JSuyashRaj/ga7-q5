@@ -1,4 +1,3 @@
-# chart.py
 import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -22,8 +21,8 @@ df = pd.DataFrame(data, columns=["Month", "Segment", "Revenue"])
 sns.set_style("whitegrid")
 sns.set_context("talk")
 
-# Create figure 512x512 px → (8,8) inches at 64 dpi
-plt.figure(figsize=(8, 8), dpi=64)
+# Create figure exactly 512x512 px
+plt.figure(figsize=(5.12, 5.12), dpi=100)
 
 # Lineplot
 sns.lineplot(data=df, x="Month", y="Revenue", hue="Segment", marker="o", palette="Set2")
@@ -36,5 +35,5 @@ plt.ylabel("Revenue ($)")
 # Rotate x labels for readability
 plt.xticks(rotation=45)
 
-# Save chart
-plt.savefig("chart.png", dpi=64, bbox_inches="tight")
+# Save chart with exact size
+plt.savefig("chart.png", dpi=100)
